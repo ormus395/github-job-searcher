@@ -1,0 +1,22 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ListItem {
+  /* max-height: 300px; */
+  max-width: 350px;
+}

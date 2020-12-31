@@ -1,0 +1,16 @@
+.header {
+  background-image: url(../../assets/desktop/bg-pattern-header.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

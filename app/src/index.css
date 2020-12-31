@@ -1,0 +1,97 @@
+/*
+
+primary colors
+
+violet: 
+  HEX: #9e7f66
+  RGB: rgb(158, 127, 102)
+  HSL: hsl(27°, 22%, 51%)
+
+Light Violet: 
+  HEX 	: #939BF4
+  RGB 	: rgb(147, 155, 244)
+  HSL 	: hsl(235°, 82%, 77%)
+
+White: 
+HEX 	: #FFFFFF
+RGB 	: rgb(255, 255, 255)
+HSL 	: hsl(0°, 0%, 100%)
+
+Light Grey:
+HEX 	: #F4F6F8
+RGB 	: rgb(244, 246, 248)
+HSL 	: hsl(210°, 22%, 96%)
+
+Very Dark Blue:
+HEX 	: #19202D
+RGB 	: rgb(25, 32, 45)
+HSL 	: hsl(219°, 29%, 14%)
+
+Midnight
+HEX 	: #121721
+RGB 	: rgb(18, 23, 33)
+HSL 	: hsl(220°, 29%, 10%)
+
+gray
+HEX 	: #9DAEC2
+RGB 	: rgb(157, 174, 194)
+HSL 	: hsl(212°, 23%, 69%)
+
+dark grey
+HEX 	: #6E8098
+RGB 	: rgb(110, 128, 152)
+HSL 	: hsl(214°, 17%, 51%)
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+@import-normalize;
+
+:root {
+  --light-grey: #f4f6f8;
+  --white: #fff;
+  --violet: #5964e0;
+  --light-violet: #939bf4;
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: var(--light-grey);
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+img {
+  width: 100%;
+}
+
+.contain {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* main */
+
+.main {
+  margin-top: 3rem;
+}
