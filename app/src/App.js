@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Header from "./components/Header/Header";
+import Toggle from "./components/Toggle/Toggle";
 
 import List from "./components/List/List";
 import Card from "./components/Card/Card";
@@ -49,7 +50,7 @@ function App() {
     <div className="App">
       <Header>
         <h3>devjobs</h3>
-        <p>Toggle</p>
+        <Toggle />
       </Header>
       <main className="main contain">
         {jobsLoaded ? <List data={state} card={Card} /> : "Loading..."}
