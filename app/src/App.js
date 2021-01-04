@@ -2,13 +2,20 @@ import { useEffect, useState } from "react";
 
 import Header from "./components/Header/Header";
 import Toggle from "./components/Toggle/Toggle";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 import List from "./components/List/List";
 import Card from "./components/Card/Card";
 
 function App() {
+  // fetch by pagination
+  // fetches 50, but original paige only loads 12,
+  // need to keep track of how many are loaded, and the amount on screen
+  // load more button will client paginate til all 50 have been loaded
+  // then once 50 has been hit, paginate the api
   const [state, setState] = useState([]);
   const [jobsLoaded, setJobsLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -20,8 +27,9 @@ function App() {
           setJobsLoaded(true);
           setState(json);
         }
-      });
-  }, [jobsLoaded]);
+      })
+      .catch((err) => console.log(err));
+  }, [jobsLoaded, error]);
 
   const buildJobs = () => {
     let jobs = [];
@@ -50,10 +58,17 @@ function App() {
     <div className="App">
       <Header>
         <h3>devjobs</h3>
+        <SearchBar />
         <Toggle />
       </Header>
       <main className="main contain">
-        {jobsLoaded ? <List data={state} card={Card} /> : "Loading..."}
+        {error ? (
+          "We're sorry, it looks like an error occured."
+        ) : jobsLoaded ? (
+          <List data={state} card={Card} />
+        ) : (
+          "Loading..."
+        )}
       </main>
       <footer></footer>
     </div>
